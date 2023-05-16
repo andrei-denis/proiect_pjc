@@ -51,6 +51,7 @@ public class Soldier : Character {
 
     public override void Attack()
     {
+        this.GetComponentInChildren<Animator>().SetTrigger("attack");
         if(state == State.MoveLeft){
             Recoil(1);
         }

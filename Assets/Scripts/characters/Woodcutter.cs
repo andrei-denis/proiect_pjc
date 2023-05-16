@@ -74,8 +74,13 @@ public class Woodcutter : Character {
     {
         StopMoving();
 
-        yield return new WaitForSeconds(cuttingTime);
-
+        float timeElapsed = 0;
+        while(timeElapsed < cuttingTime){
+            this.GetComponentInChildren<Animator>().SetTrigger("attack");
+            yield return new WaitForSeconds(0.5f);
+            timeElapsed += 0.5f;
+        }
+        
         targetTree.GetComponent<Tree>().Cut();
 
         targetTree=null;

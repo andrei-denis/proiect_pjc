@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2880858835068778782}
   - component: {fileID: 2667332653061637260}
+  - component: {fileID: 3236121576285164640}
   m_Layer: 10
   m_Name: Acc
   m_TagString: Untagged
@@ -420,6 +421,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3236121576285164640
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878355797570708680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a33176384bc624bc6974fe9e939ce241, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2878622583861763022
 GameObject:
   m_ObjectHideFlags: 0

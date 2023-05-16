@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Portal
   - Trap
+  - Bullet
   layers:
   - Default
   - TransparentFX

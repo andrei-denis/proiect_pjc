@@ -6,6 +6,10 @@ public class Player : Character
 {
     private GameObject nearBuilding, nearTree;
 
+    public GameObject bullet;
+
+    public float attactDurration;
+
     protected override void Death()
     {
         Main.instance.GameOver();
@@ -41,7 +45,14 @@ public class Player : Character
 
     public override void Attack()
     {
-      //Not doing  
+        StartCoroutine(inAttack());
+        this.GetComponentInChildren<Animator>().SetTrigger("attack");
+    }
+
+    private IEnumerator inAttack(){
+        bullet.SetActive(true);
+        yield return new WaitForSeconds(attactDurration);
+        bullet.SetActive(false);
     }
 
 
@@ -76,5 +87,10 @@ public class Player : Character
     public void UpdateLifeText()
     {
         Main.instance.lifeTxt.text = "Life: " + life.ToString() + "/" + max_life.ToString();
+    }
+
+    public float getDamage(){
+        bullet.SetActive(false);
+        return damage;
     }
 }

@@ -46,6 +46,7 @@ public class Enemy : Character {
 
     public override void Attack()
     {
+        this.GetComponentInChildren<Animator>().SetTrigger("attack");
         if(state == State.MoveLeft){
             Recoil(1);
         }
@@ -127,6 +128,9 @@ public class Enemy : Character {
                     Main.instance.enemies.Remove(this);
                     Destroy(this.gameObject);
                 }
+                break;
+            case "Bullet":
+                this.TakeDamage(Main.instance.player.getDamage(), state);
                 break;
         }
     }
